@@ -44,7 +44,7 @@ if x_speed_ > 0 {
 	// Left collisions
 	if (grid_place_meeting(self, o_level.grid_)) {
 		x = bbox_left&~(CELL_WIDTH-1);
-		x += CELL_WIDTH+x-bbox_left;
+		x += CELL_WIDTH+x-bbox_left-.1;
 		x_speed_ = 0;
 	}
 }
@@ -64,7 +64,7 @@ if y_speed_ > 0 {
 	// Top collisions
 	if (grid_place_meeting(self, o_level.grid_)) {
 		y = bbox_top&~(CELL_HEIGHT-1);
-		y += CELL_HEIGHT+y-bbox_top;
+		y += CELL_HEIGHT+y-bbox_top-.1;
 		y_speed_ = 0;
 	}
 }
